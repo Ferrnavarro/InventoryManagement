@@ -1,7 +1,7 @@
 ﻿@model coderush.Models.ApplicationUser
 @inject coderush.Data.ApplicationDbContext Context
 @{
-    ViewData["Title"] = "User Profile";
+    ViewData["Title"] = "Perfil";
     UserProfile profile = Context.UserProfile.SingleOrDefault(x => x.ApplicationUserId.Equals(Model.Id));
 }
 
@@ -51,11 +51,11 @@
                             <div class="col-lg-9"><input class="form-control" value="@profile.Email" disabled/></div>
                         </div>
                         <div class="form-group">
-                            <div class="col-lg-3">First Name</div>
+                            <div class="col-lg-3">Nombre</div>
                             <div class="col-lg-9"><input class="form-control" value="@profile.FirstName" disabled /></div>
                         </div>
                         <div class="form-group">
-                            <div class="col-lg-3">Last Name</div>
+                            <div class="col-lg-3">Apellido</div>
                             <div class="col-lg-9"><input class="form-control" value="@profile.LastName" disabled /></div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
         </div>
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title text-primary"><i class="fa fa-user"></i> Edit Profile </h3>
+                <h3 class="box-title text-primary"><i class="fa fa-user"></i> Editar Perfil </h3>
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                             title="Collapse">
@@ -86,7 +86,7 @@
         </div>
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title text-primary"><i class="fa fa-key"></i> Change Password </h3>
+                <h3 class="box-title text-primary"><i class="fa fa-key"></i> Cambiar Contraseña </h3>
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                             title="Collapse">
@@ -121,13 +121,13 @@
         </tr>
         <tr>
             <td>
-                First Name
+                Nombre
             </td>
             <td>
                 <input id="FirstNamePassword" name="FirstNamePassword" value="{{:FirstName}}" />
             </td>
             <td>
-                Last Name
+                Apellido
             </td>
             <td>
                 <input id="LastNamePassword" name="LastNamePassword" value="{{:LastName}}" />
@@ -135,7 +135,7 @@
         </tr>
         <tr>
             <td>
-                Old Password
+                Contraseña Vieja
             </td>
             <td>
                 <input id="OldPassword" name="OldPassword" value="" />
@@ -145,13 +145,13 @@
         </tr>
         <tr>
             <td>
-                New Password
+                Nueva Contraseña
             </td>
             <td>
                 <input id="Password" name="Password" value="" />
             </td>
             <td>
-                Re-type Password
+                Reescribir Contraseña
             </td>
             <td>
                 <input id="ConfirmPassword" name="ConfirmPassword" value="" />
@@ -173,13 +173,13 @@
         </tr>
         <tr>
             <td>
-                First Name
+                Nombre
             </td>
             <td>
                 <input id="FirstName" name="FirstName" value="{{:FirstName}}" />
             </td>
             <td>
-                Last Name
+                Apellido
             </td>
             <td>
                 <input id="LastName" name="LastName" value="{{:LastName}}" />
@@ -254,8 +254,8 @@
                 columns: [
                     { field: "UserProfileId", headerText: 'Id', isPrimaryKey: true, isIdentity: true, visible: false },
                     { field: "Email", headerText: 'Email', validationRules: { required: true } },
-                    { field: "FirstName", headerText: 'First Name', validationRules: { required: true } },
-                    { field: "LastName", headerText: 'Last Name', validationRules: { required: false } },
+                    { field: "FirstName", headerText: 'Nombre', validationRules: { required: true } },
+                    { field: "LastName", headerText: 'Apellido', validationRules: { required: false } },
                 ],
                 actionComplete: "complete",
             });
@@ -295,8 +295,8 @@
                 columns: [
                     { field: "UserProfileId", headerText: 'Id', isPrimaryKey: true, isIdentity: true, visible: false },
                     { field: "Email", headerText: 'Email', validationRules: { required: true } },
-                    { field: "FirstName", headerText: 'First Name', validationRules: { required: true } },
-                    { field: "LastName", headerText: 'Last Name', validationRules: { required: false } },
+                    { field: "FirstName", headerText: 'Nombre', validationRules: { required: true } },
+                    { field: "LastName", headerText: 'Apellido', validationRules: { required: false } },
                 ],
                 actionComplete: "completeGridPassword",
             });
@@ -316,7 +316,7 @@
             });
 
             if (args.requestType == 'beginedit') {
-                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Edit Profile" });
+                $("#" + this._id + "_dialogEdit").ejDialog({ title: "Editar Perfil" });
                 $("#Email").ejMaskEdit("disable");
             }
 

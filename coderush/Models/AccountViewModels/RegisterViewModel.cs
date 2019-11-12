@@ -20,8 +20,8 @@ namespace coderush.Models.AccountViewModels
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Display(Name = "Confirmar password")]
+        [Compare("Password", ErrorMessage = "La confirmación no es válida.")]
         public string ConfirmPassword { get; set; }
     }
 }

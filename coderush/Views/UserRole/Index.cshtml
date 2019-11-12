@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Users";
+    ViewData["Title"] = "Usuarios";
 }
 
 <!-- Content Wrapper. Contains page content -->
@@ -50,13 +50,13 @@
         </tr>
         <tr>
             <td>
-                First Name
+                Nombre
             </td>
             <td>
                 <input id="FirstName" name="FirstName" value="{{:FirstName}}" />
             </td>
             <td>
-                Last Name
+                Apellido
             </td>
             <td>
                 <input id="LastName" name="LastName" value="{{:LastName}}" />
@@ -64,13 +64,13 @@
         </tr>
         <tr>
             <td>
-                Password
+                Contraseña
             </td>
             <td>
                 <input id="Password" name="Password" value="{{:Password}}" />
             </td>
             <td>
-                Re-type Password
+                Reescribir Contraseña
             </td>
             <td>
                 <input id="ConfirmPassword" name="ConfirmPassword" value="{{:ConfirmPassword}}" />
@@ -92,13 +92,13 @@
         </tr>
         <tr>
             <td>
-                First Name
+                Nombre
             </td>
             <td>
                 <input id="FirstName" name="FirstName" value="{{:FirstName}}" />
             </td>
             <td>
-                Last Name
+                Apellido
             </td>
             <td>
                 <input id="LastName" name="LastName" value="{{:LastName}}" />
@@ -158,8 +158,8 @@
                     columns: [
                         { field: "UserProfileId", headerText: 'Id', isPrimaryKey: true, isIdentity: true, visible: false },
                         { field: "Email", headerText: 'Email', validationRules: { required: true } },
-                        { field: "FirstName", headerText: 'First Name', validationRules: { required: true } },
-                        { field: "LastName", headerText: 'Last Name', validationRules: { required: false } },
+                        { field: "FirstName", headerText: 'Nombre', validationRules: { required: true } },
+                        { field: "LastName", headerText: 'Apellido', validationRules: { required: false } },
                     ],
                     actionComplete: "complete",
                     actionBegin: "begin",

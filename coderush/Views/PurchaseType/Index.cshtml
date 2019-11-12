@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Purchase Type";
+    ViewData["Title"] = "Tipo de Compra";
 }
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -84,9 +84,9 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "PurchaseTypeId", headerText: 'Purchase Type Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "PurchaseTypeName", headerText: 'Purchase Type Name', validationRules: { required: true } },
-                        { field: "Description", headerText: 'Description', },
+                        { field: "PurchaseTypeId", headerText: 'Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "PurchaseTypeName", headerText: 'Nombre', validationRules: { required: true } },
+                        { field: "Description", headerText: 'Descripcion', },
                     ],
                     actionComplete: "complete",
                 });

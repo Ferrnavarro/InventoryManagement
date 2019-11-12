@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Goods Received Note";
+    ViewData["Title"] = "Recibo de Compra";
 }
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -94,14 +94,14 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "GoodsReceivedNoteId", headerText: 'GRN', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "GoodsReceivedNoteName", headerText: 'GRN#', allowEditing: false },
-                        { field: "IsFullReceive", headerText: 'Full Receive', allowEditing: false, type: "boolean", editType: "booleanedit", defaultValue: true },
-                        { field: "PurchaseOrderId", headerText: 'PO#', foreignKeyField: "PurchaseOrderId", foreignKeyValue: "PurchaseOrderName", dataSource: dataManagerPurchaseOrder, validationRules: { required: true } },
-                        { field: "GRNDate", headerText: 'Receiving Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
-                        { field: "VendorDONumber", headerText: 'Vendor DO#', validationRules: { required: true } },
-                        { field: "VendorInvoiceNumber", headerText: 'Vendor Invoice#', },
-                        { field: "WarehouseId", headerText: 'Warehouse', foreignKeyField: "WarehouseId", foreignKeyValue: "WarehouseName", dataSource: dataManagerWarehouse, validationRules: { required: true } },
+                        { field: "GoodsReceivedNoteId", headerText: 'Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "GoodsReceivedNoteName", headerText: 'Recibo#', allowEditing: false },
+                        { field: "IsFullReceive", headerText: 'Completado', allowEditing: false, type: "boolean", editType: "booleanedit", defaultValue: true },
+                        { field: "PurchaseOrderId", headerText: 'OC#', foreignKeyField: "PurchaseOrderId", foreignKeyValue: "PurchaseOrderName", dataSource: dataManagerPurchaseOrder, validationRules: { required: true } },
+                        { field: "GRNDate", headerText: 'Fecha', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
+                        { field: "VendorDONumber", headerText: 'Numero Nota Proveedor', validationRules: { required: true } },
+                        { field: "VendorInvoiceNumber", headerText: 'Factura Proveedor', },
+                        { field: "WarehouseId", headerText: 'Bodega', foreignKeyField: "WarehouseId", foreignKeyValue: "WarehouseName", dataSource: dataManagerWarehouse, validationRules: { required: true } },
                     ],
                     actionComplete: "complete",
                 });

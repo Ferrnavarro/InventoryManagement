@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Vendor";
+    ViewData["Title"] = "Proveedor";
 }
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -89,16 +89,16 @@
                 allowPaging: true,
                 pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                 columns: [
-                    { field: "VendorId", headerText: 'Vendor Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                    { field: "VendorName", headerText: 'Vendor Name' },
-                    { field: "VendorTypeId", headerText: 'Vendor Type', foreignKeyField: "VendorTypeId", foreignKeyValue: "VendorTypeName", dataSource: dataManagerVendorType },
-                    { field: "Address", headerText: 'Address', },
-                    { field: "City", headerText: 'City', },
-                    { field: "State", headerText: 'State', },
-                    { field: "ZipCode", headerText: 'ZipCode', },
-                    { field: "Phone", headerText: 'Phone', },
+                    { field: "VendorId", headerText: 'Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                    { field: "VendorName", headerText: 'Nombre' },
+                    { field: "VendorTypeId", headerText: 'Tipo', foreignKeyField: "VendorTypeId", foreignKeyValue: "VendorTypeName", dataSource: dataManagerVendorType },
+                    { field: "Address", headerText: 'Direccion', },
+                    { field: "City", headerText: 'Ciudad', },
+                    { field: "State", headerText: 'Departamento', },
+                    { field: "ZipCode", headerText: 'Codigo Postal', },
+                    { field: "Phone", headerText: 'Telefono', },
                     { field: "Email", headerText: 'Email', },
-                    { field: "ContactPerson", headerText: 'CP', },
+                    { field: "ContactPerson", headerText: 'Contacto', },
                 ],
                 actionComplete: "complete",
             });

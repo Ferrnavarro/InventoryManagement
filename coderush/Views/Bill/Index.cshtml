@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Bill";
+    ViewData["Title"] = "Cuenta";
 }
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -94,14 +94,14 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "BillId", headerText: 'Bill', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "BillName", headerText: 'Bill#', allowEditing: false },
-                        { field: "GoodsReceivedNoteId", headerText: 'GRN', foreignKeyField: "GoodsReceivedNoteId", foreignKeyValue: "GoodsReceivedNoteName", dataSource: dataManagerGoodsReceivedNote, validationRules: { required: true } },
-                        { field: "VendorDONumber", headerText: 'Vendor DO#' },
-                        { field: "VendorInvoiceNumber", headerText: 'Vendor Invoice#' },
-                        { field: "BillDate", headerText: 'Bill Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true }, validationRules: { required: true } },
-                        { field: "BillDueDate", headerText: 'Bill Due Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true }, validationRules: { required: true } },
-                        { field: "BillTypeId", headerText: 'Bill Type', foreignKeyField: "BillTypeId", foreignKeyValue: "BillTypeName", dataSource: dataManagerBillType },
+                        { field: "BillId", headerText: 'Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "BillName", headerText: 'Numero', allowEditing: false },
+                        { field: "GoodsReceivedNoteId", headerText: 'Recibo de Compra', foreignKeyField: "GoodsReceivedNoteId", foreignKeyValue: "GoodsReceivedNoteName", dataSource: dataManagerGoodsReceivedNote, validationRules: { required: true } },
+                        { field: "VendorDONumber", headerText: 'Numero Envío Proveedor' },
+                        { field: "VendorInvoiceNumber", headerText: 'Factura Proveedor #' },
+                        { field: "BillDate", headerText: 'Fecha', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true }, validationRules: { required: true } },
+                        { field: "BillDueDate", headerText: 'Vencimiento', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true }, validationRules: { required: true } },
+                        { field: "BillTypeId", headerText: 'Tipo de Cuenta', foreignKeyField: "BillTypeId", foreignKeyValue: "BillTypeName", dataSource: dataManagerBillType },
                     ],
                     actionComplete: "complete",
                 });

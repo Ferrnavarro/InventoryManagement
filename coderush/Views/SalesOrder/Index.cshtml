@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Sales Order";
+    ViewData["Title"] = "Orden de Venta";
 }
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -104,17 +104,17 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { headerText: 'Detail', template: "<a href='/SalesOrder/Detail/{{:SalesOrderId}}'>Detail</a>" },
-                        { field: "SalesOrderId", headerText: 'SO Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "SalesOrderName", headerText: 'SO#', allowEditing: false },
-                        { field: "BranchId", headerText: 'Branch', foreignKeyField: "BranchId", foreignKeyValue: "BranchName", dataSource: dataManagerBranch, validationRules: { required: true } },
-                        { field: "CustomerId", headerText: 'Customer', foreignKeyField: "CustomerId", foreignKeyValue: "CustomerName", dataSource: dataManagerCustomer, validationRules: { required: true } },
-                        { field: "OrderDate", headerText: 'Order Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
-                        { field: "DeliveryDate", headerText: 'Delivery Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
-                        { field: "SalesTypeId", headerText: 'Sales Type', foreignKeyField: "SalesTypeId", foreignKeyValue: "SalesTypeName", dataSource: dataManagerSalesType },
-                        { field: "CurrencyId", headerText: 'Currency', allowEditing: false, foreignKeyField: "CurrencyId", foreignKeyValue: "CurrencyName", dataSource: dataManagerCurrency },
-                        { field: "CustomerRefNumber", headerText: 'Cust. Ref#', validationRules: { required: true } },
-                        { field: "Freight", headerText: 'Freight', defaultValue: 0, editType: "numericedit", format: "{0:n2}" },
+                        { headerText: 'Detalle', template: "<a href='/SalesOrder/Detail/{{:SalesOrderId}}'>Detail</a>" },
+                        { field: "SalesOrderId", headerText: 'Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "SalesOrderName", headerText: 'Numero', allowEditing: false },
+                        { field: "BranchId", headerText: 'Rama', foreignKeyField: "BranchId", foreignKeyValue: "BranchName", dataSource: dataManagerBranch, validationRules: { required: true } },
+                        { field: "CustomerId", headerText: 'Cliente', foreignKeyField: "CustomerId", foreignKeyValue: "CustomerName", dataSource: dataManagerCustomer, validationRules: { required: true } },
+                        { field: "OrderDate", headerText: 'Fecha de Orden', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
+                        { field: "DeliveryDate", headerText: 'Fecha de Envío', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
+                        { field: "SalesTypeId", headerText: 'Tipo de Venta', foreignKeyField: "SalesTypeId", foreignKeyValue: "SalesTypeName", dataSource: dataManagerSalesType },
+                        { field: "CurrencyId", headerText: 'Moneda', allowEditing: false, foreignKeyField: "CurrencyId", foreignKeyValue: "CurrencyName", dataSource: dataManagerCurrency },
+                        { field: "CustomerRefNumber", headerText: 'Numero Ref.', validationRules: { required: true } },
+                        { field: "Freight", headerText: 'Carga', defaultValue: 0, editType: "numericedit", format: "{0:n2}" },
                     ],
                     actionComplete: "complete",
                 });

@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Shipment Type";
+    ViewData["Title"] = "Tipo Envío";
 }
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -84,9 +84,9 @@
                 allowPaging: true,
                 pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                 columns: [
-                    { field: "ShipmentTypeId", headerText: 'Shipment Type Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                    { field: "ShipmentTypeName", headerText: 'Shipment Type Name', validationRules: { required: true } },
-                    { field: "Description", headerText: 'Description', },
+                    { field: "ShipmentTypeId", headerText: 'Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                    { field: "ShipmentTypeName", headerText: 'Nombre', validationRules: { required: true } },
+                    { field: "Description", headerText: 'Descripcion', },
                 ],
                 actionComplete: "complete",
             });

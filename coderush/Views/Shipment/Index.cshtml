@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Shipment";
+    ViewData["Title"] = "Envío";
 }
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -99,13 +99,13 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "ShipmentId", headerText: 'Shipment', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "ShipmentName", headerText: 'Shipment / DO#', allowEditing: false },
-                        { field: "IsFullShipment", headerText: 'Full Shipment', allowEditing: false, type: "boolean", editType: "booleanedit", defaultValue: true },
-                        { field: "SalesOrderId", headerText: 'SO#', foreignKeyField: "SalesOrderId", foreignKeyValue: "SalesOrderName", dataSource: dataManagerSalesOrder, validationRules: { required: true } },
-                        { field: "ShipmentDate", headerText: 'Shipment Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
-                        { field: "ShipmentTypeId", headerText: 'Shipment Type', foreignKeyField: "ShipmentTypeId", foreignKeyValue: "ShipmentTypeName", dataSource: dataManagerShipmentType },
-                        { field: "WarehouseId", headerText: 'Warehouse', foreignKeyField: "WarehouseId", foreignKeyValue: "WarehouseName", dataSource: dataManagerWarehouse, validationRules: { required: true } },
+                        { field: "ShipmentId", headerText: 'Envío Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "ShipmentName", headerText: 'Numero', allowEditing: false },
+                        { field: "IsFullShipment", headerText: 'Envío Completo', allowEditing: false, type: "boolean", editType: "booleanedit", defaultValue: true },
+                        { field: "SalesOrderId", headerText: '# Orden de Venta', foreignKeyField: "SalesOrderId", foreignKeyValue: "SalesOrderName", dataSource: dataManagerSalesOrder, validationRules: { required: true } },
+                        { field: "ShipmentDate", headerText: 'Fecha de Envío', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
+                        { field: "ShipmentTypeId", headerText: 'Tipo de Envío', foreignKeyField: "ShipmentTypeId", foreignKeyValue: "ShipmentTypeName", dataSource: dataManagerShipmentType },
+                        { field: "WarehouseId", headerText: 'Bodega', foreignKeyField: "WarehouseId", foreignKeyValue: "WarehouseName", dataSource: dataManagerWarehouse, validationRules: { required: true } },
                     ],
                     actionComplete: "complete",
                 });

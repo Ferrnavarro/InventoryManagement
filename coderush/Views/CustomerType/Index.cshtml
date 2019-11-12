@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Customer Type";
+    ViewData["Title"] = "Tipo de Cliente";
 }
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -84,8 +84,8 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "CustomerTypeId", headerText: 'Customer Type Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "CustomerTypeName", headerText: 'Customer Type Name', validationRules: { required: true } },
+                        { field: "CustomerTypeId", headerText: 'Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "CustomerTypeName", headerText: 'Nombre', validationRules: { required: true } },
                         { field: "Description", headerText: 'Description', },
                     ],
                     actionComplete: "complete",

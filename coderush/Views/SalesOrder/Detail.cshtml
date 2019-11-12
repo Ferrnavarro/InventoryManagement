@@ -1,7 +1,7 @@
 ﻿@model coderush.Models.SalesOrder
 
 @{
-    ViewData["Title"] = "Sales Order Detail";
+    ViewData["Title"] = "Detalle Orden de Venta";
 }
 
 <!-- Content Wrapper. Contains page content -->
@@ -253,18 +253,18 @@
                 },
                 allowPaging: true,
                 columns: [
-                    { field: "SalesOrderLineId", headerText: 'Line Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                    { field: "SalesOrderId", headerText: 'SO#', defaultValue: @Model.SalesOrderId, foreignKeyField: "SalesOrderId", foreignKeyValue: "SalesOrderName", dataSource: dataManagerSalesOrder, visible: false },
-                    { field: "ProductId", headerText: 'Product', foreignKeyField: "ProductId", foreignKeyValue: "ProductName", dataSource: dataManagerProduct },
-                    { field: "Description", headerText: 'Description' },
-                    { field: "Quantity", headerText: 'Qty', defaultValue: 1, editType: "numericedit", format: "{0:n2}" },
-                    { field: "Price", headerText: 'Price', defaultValue: 0, editType: "numericedit", format: "{0:n2}" },
-                    { field: "Amount", headerText: 'Amount', defaultValue: 0, allowEditing: false, editType: "numericedit", format: "{0:n2}" },
-                    { field: "DiscountPercentage", headerText: 'Disc %', defaultValue: 0, editType: "numericedit", format: "{0:n2}" },
-                    { field: "DiscountAmount", headerText: 'Disc Amt', defaultValue: 0, visible: false, editType: "numericedit", format: "{0:n2}" },
+                    { field: "SalesOrderLineId", headerText: 'Linea Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                    { field: "SalesOrderId", headerText: 'OV#', defaultValue: @Model.SalesOrderId, foreignKeyField: "SalesOrderId", foreignKeyValue: "SalesOrderName", dataSource: dataManagerSalesOrder, visible: false },
+                    { field: "ProductId", headerText: 'Producto', foreignKeyField: "ProductId", foreignKeyValue: "ProductName", dataSource: dataManagerProduct },
+                    { field: "Description", headerText: 'Descripcion' },
+                    { field: "Quantity", headerText: 'Cantidad', defaultValue: 1, editType: "numericedit", format: "{0:n2}" },
+                    { field: "Price", headerText: 'Precio', defaultValue: 0, editType: "numericedit", format: "{0:n2}" },
+                    { field: "Amount", headerText: 'Valor', defaultValue: 0, allowEditing: false, editType: "numericedit", format: "{0:n2}" },
+                    { field: "DiscountPercentage", headerText: 'Desc %', defaultValue: 0, editType: "numericedit", format: "{0:n2}" },
+                    { field: "DiscountAmount", headerText: 'Valor Descuento', defaultValue: 0, visible: false, editType: "numericedit", format: "{0:n2}" },
                     { field: "SubTotal", headerText: 'SubTotal', defaultValue: 0, allowEditing: false, editType: "numericedit", format: "{0:n2}" },
-                    { field: "TaxPercentage", headerText: 'Tax %', defaultValue: 0, editType: "numericedit", format: "{0:n2}" },
-                    { field: "TaxAmount", headerText: 'Tax Amt', defaultValue: 0, visible: false, editType: "numericedit", format: "{0:n2}" },
+                    { field: "TaxPercentage", headerText: 'IVA %', defaultValue: 0, editType: "numericedit", format: "{0:n2}" },
+                    { field: "TaxAmount", headerText: 'Valor IVA', defaultValue: 0, visible: false, editType: "numericedit", format: "{0:n2}" },
                     { field: "Total", headerText: 'Total', defaultValue: 0, allowEditing: false, editType: "numericedit", format: "{0:n2}" },
                 ],
                 actionComplete: "complete",

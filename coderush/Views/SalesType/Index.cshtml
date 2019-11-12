@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Sales Type";
+    ViewData["Title"] = "Tipo de Venta";
 }
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -84,9 +84,9 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "SalesTypeId", headerText: 'Sales Type Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "SalesTypeName", headerText: 'Sales Type Name', validationRules: { required: true } },
-                        { field: "Description", headerText: 'Description', },
+                        { field: "SalesTypeId", headerText: 'Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "SalesTypeName", headerText: 'Nombre', validationRules: { required: true } },
+                        { field: "Description", headerText: 'Descripcion', },
                     ],
                     actionComplete: "complete",
                 });

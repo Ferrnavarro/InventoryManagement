@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Payment Receive";
+    ViewData["Title"] = "Recibo de Pago";
 }
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -94,13 +94,13 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "PaymentReceiveId", headerText: 'Payment Receive', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "PaymentReceiveName", headerText: 'Payment Receive#', allowEditing: false },
-                        { field: "IsFullPayment", headerText: 'Full Payment', allowEditing: false, type: "boolean", editType: "booleanedit", defaultValue: true },
-                        { field: "InvoiceId", headerText: 'Invoice#', foreignKeyField: "InvoiceId", foreignKeyValue: "InvoiceName", dataSource: dataManagerInvoice, validationRules: { required: true } },
-                        { field: "PaymentDate", headerText: 'Payment Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
-                        { field: "PaymentTypeId", headerText: 'Payment Type', foreignKeyField: "PaymentTypeId", foreignKeyValue: "PaymentTypeName", dataSource: dataManagerPaymentType },
-                        { field: "PaymentAmount", headerText: 'Payment Amount', editType: "numericedit", format: "{0:n2}", validationRules: { required: true } },
+                        { field: "PaymentReceiveId", headerText: 'Recibo de Pago', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "PaymentReceiveName", headerText: 'Recibo de Pago #', allowEditing: false },
+                        { field: "IsFullPayment", headerText: 'Pago Completo', allowEditing: false, type: "boolean", editType: "booleanedit", defaultValue: true },
+                        { field: "InvoiceId", headerText: 'Factura#', foreignKeyField: "InvoiceId", foreignKeyValue: "InvoiceName", dataSource: dataManagerInvoice, validationRules: { required: true } },
+                        { field: "PaymentDate", headerText: 'Fecha', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
+                        { field: "PaymentTypeId", headerText: 'Tipo de Pago', foreignKeyField: "PaymentTypeId", foreignKeyValue: "PaymentTypeName", dataSource: dataManagerPaymentType },
+                        { field: "PaymentAmount", headerText: 'Valor', editType: "numericedit", format: "{0:n2}", validationRules: { required: true } },
                     ],
                     actionComplete: "complete",
                 });

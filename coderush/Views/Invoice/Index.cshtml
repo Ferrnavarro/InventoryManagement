@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Invoice";
+    ViewData["Title"] = "Factura";
 }
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -94,12 +94,12 @@
                     allowPaging: true,
                     pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                     columns: [
-                        { field: "InvoiceId", headerText: 'Invoice', isPrimaryKey: true, isIdentity: true, visible: false },
-                        { field: "InvoiceName", headerText: 'Invoice#', allowEditing: false },
-                        { field: "ShipmentId", headerText: 'Shipment / DO', foreignKeyField: "ShipmentId", foreignKeyValue: "ShipmentName", dataSource: dataManagerShipment, validationRules: { required: true } },
-                        { field: "InvoiceDate", headerText: 'Invoice Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
-                        { field: "InvoiceDueDate", headerText: 'Invoice Due Date', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
-                        { field: "InvoiceTypeId", headerText: 'Invoice Type', foreignKeyField: "InvoiceTypeId", foreignKeyValue: "InvoiceTypeName", dataSource: dataManagerInvoiceType },
+                        { field: "InvoiceId", headerText: 'Factura ID', isPrimaryKey: true, isIdentity: true, visible: false },
+                        { field: "InvoiceName", headerText: 'Factura #', allowEditing: false },
+                        { field: "ShipmentId", headerText: 'Envío', foreignKeyField: "ShipmentId", foreignKeyValue: "ShipmentName", dataSource: dataManagerShipment, validationRules: { required: true } },
+                        { field: "InvoiceDate", headerText: 'Fecha Factura', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
+                        { field: "InvoiceDueDate", headerText: 'Vencimiento', editType: "datepicker", format: "{0:MM/dd/yyyy}", validationRules: { required: true } },
+                        { field: "InvoiceTypeId", headerText: 'Tipo de Factura', foreignKeyField: "InvoiceTypeId", foreignKeyValue: "InvoiceTypeName", dataSource: dataManagerInvoiceType },
                     ],
                     actionComplete: "complete",
                 });

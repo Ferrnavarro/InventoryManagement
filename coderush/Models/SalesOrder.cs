@@ -8,22 +8,23 @@ namespace coderush.Models
 {
     public class SalesOrder
     {
+        [Display(Name = "Id")]
         public int SalesOrderId { get; set; }
-        [Display(Name = "Order Number")]
+        [Display(Name = "Numero de Orden")]
         public string SalesOrderName { get; set; }
-        [Display(Name = "Branch")]
+        [Display(Name = "Rama")]
         public int BranchId { get; set; }
-        [Display(Name = "Customer")]
+        [Display(Name = "Cliente")]
         public int CustomerId { get; set; }
         public DateTimeOffset OrderDate { get; set; }
         public DateTimeOffset DeliveryDate { get; set; }
 
-        [Display(Name = "Currency")]
+        [Display(Name = "Moneda")]
         public int CurrencyId { get; set; }
 
-        [Display(Name = "Customer Ref. Number")]
+        [Display(Name = "Numero Referencia")]
         public string CustomerRefNumber { get; set; }
-        [Display(Name = "Sales Type")]
+        [Display(Name = "Tipo de Venta")]
         public int SalesTypeId { get; set; }
         public string Remarks { get; set; }
         public double Amount { get; set; }

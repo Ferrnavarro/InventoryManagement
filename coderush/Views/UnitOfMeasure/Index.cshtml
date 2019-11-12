@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Unit of Measure";
+    ViewData["Title"] = "Unidad de Medida";
 }
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -84,9 +84,9 @@
                 allowPaging: true,
                 pageSettings: { pageSize: 10, printMode: ej.Grid.PrintMode.CurrentPage },
                 columns: [
-                    { field: "UnitOfMeasureId", headerText: 'Unit of Measure Id', isPrimaryKey: true, isIdentity: true, visible: false },
-                    { field: "UnitOfMeasureName", headerText: 'Unit of Measure Name', validationRules: { required: true } },
-                    { field: "Description", headerText: 'Description', },
+                    { field: "UnitOfMeasureId", headerText: 'Id', isPrimaryKey: true, isIdentity: true, visible: false },
+                    { field: "UnitOfMeasureName", headerText: 'Nombre', validationRules: { required: true } },
+                    { field: "Description", headerText: 'Descripcion', },
                 ],
                 actionComplete: "complete",
             });
